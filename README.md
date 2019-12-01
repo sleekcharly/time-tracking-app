@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ### Running the app
 
 1. Ensure you have `npm` installed.
@@ -17,3 +18,7 @@ npm run server
 ````
 
 The server is now running at [localhost:3000](localhost:3000)
+=======
+# time-tracking-app
+A time tracking app designed with react
+>>>>>>> 8a8357cdc210560512a86cf9383156691c4fc067
