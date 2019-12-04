@@ -226,7 +226,10 @@ class Timer extends React.Component {
                     </div>
 
                     <div className='extra content'>
-                        <span className='right floated edit icon'>
+                        <span 
+                            className='right floated edit icon'
+                            onClick={this.props.onEditCLick}
+                        >
                             <i className='edit icon' />
                         </span>
 
