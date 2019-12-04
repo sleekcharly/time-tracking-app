@@ -252,6 +252,11 @@ class ToggleableTimerForm extends React.Component {
 }
 
 class Timer extends React.Component {
+
+    handleTrashClick = () => {
+        this.props.onTrashClick(this.props.id);
+    };
+
     render() {
         const elapsedString = helpers.renderElapsedString(this.props.elapsed);
         return (
@@ -279,7 +284,10 @@ class Timer extends React.Component {
                             <i className='edit icon' />
                         </span>
 
-                        <span className='right floated trash icon'>
+                        <span 
+                            className='right floated trash icon'
+                            onClick={this.handleTrashClick}
+                        >
                             <i className='trash icon' />
                         </span>
                     </div>
