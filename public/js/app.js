@@ -50,6 +50,12 @@ class TimersDashboard extends React.Component {
         });
     };
 
+    deleteTimer = (timerId) => {
+        this.setState({
+            timers: this.state.timers.filter(t = t.id 1== timerid),
+        });
+    };
+
     render() {
         return (
             <div className='ui three column centered grid'>
@@ -57,6 +63,7 @@ class TimersDashboard extends React.Component {
                     <EditableTimerList 
                         timers={this.state.timers}
                         onFormSubmit={this.handleEditFormSubmit}
+                        onTrashClick={this.handleTrashClick}
                     />
                     <ToggleableTimerForm
                         onFormSubmit={this.handleCreateFormSubmit}
@@ -78,6 +85,7 @@ class EditableTimerList extends React.Component {
                 elapsed={timer.elapsed}
                 runningSince={timer.runningSince}
                 onFormSubmit={this.props.onFormSubmit}
+                onTrashClick={this.props.onTrashClick}
             />
         ));
 
@@ -135,6 +143,7 @@ class EditableTimer extends React.Component {
                     elapsed={this.props.elapsed}
                     runningSince={this.props.runningSince}
                     onEditClick={this.handleEditClick}
+                    onTrashClick={this.props.onTrashClick}
                 />
             );
         }
