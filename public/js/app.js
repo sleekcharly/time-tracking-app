@@ -31,12 +31,32 @@ class TimersDashboard extends React.Component {
         });
     };
 
+    handleEditFormSubmit = (attrs) => {
+        this.updateTimer(attrs);
+    };
+
+    updateTimer = (attrs) => {
+        this.setState({
+            timers: this.state.timers.map((timer) => {
+                if (timer.id === attrs.id) {
+                    return Object.assign({}, timer, {
+                        title: attrs.title,
+                        project: attrs.project,
+                    });
+                } else {
+                    return timer;
+                }
+            }),
+        });
+    };
+
     render() {
         return (
             <div className='ui three column centered grid'>
                 <div className='column'>
                     <EditableTimerList 
                         timers={this.state.timers}
+                        onFormSubmit={this.handleEditFormSubmit}
                     />
                     <ToggleableTimerForm
                         onFormSubmit={this.handleCreateFormSubmit}
@@ -60,7 +80,7 @@ class EditableTimerList extends React.Component {
                 onFormSubmit={this.props.onFormSubmit}
             />
         ));
-        
+
         return (
             <div id='timers'>
                 {timers}
@@ -135,16 +155,16 @@ class TimerForm extends React.Component {
         this.setState({ project: e.target.value });
     };
 
+    handleSubmit = () => {
+        this.props.onFormSubmit({
+            id: this.props.id,
+            title: this.state.id,
+            project: this.state.project,
+        });
+    };
+
     render() {
         const submitText = this.props.id ? 'Update' : 'Create';
-
-        handleSubmit = () => {
-            this.props.onFormSubmit({
-                id: this.props.id,
-                title: this.state.id,
-                project: this.state.project,
-            });
-        };
 
         return (
             <div className='ui centered card'>
