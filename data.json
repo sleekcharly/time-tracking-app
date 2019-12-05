@@ -1,23 +1,23 @@
 [
     {
-        "title": "Mow the lawn",
-        "project": "House Chores",
-        "elapsed": 5461968,
-        "id": "0a4a79cb-b06d-4cb1-883d-549a1e3b66d7",
+        "title": "Timer",
+        "project": "Project",
+        "id": "93b7e559-100c-4190-9dc2-d89a4989f07d",
+        "elapsed": 0,
         "runningSince": null
     },
     {
-        "title": "Clear paper jam",
-        "project": "Office Chores",
-        "elapsed": 1279605,
-        "id": "a73c1d19-f32d-4aff-b470-cea4e792406a",
+        "title": "Timer",
+        "project": "Project",
+        "id": "c43ef320-3bb5-49b5-9d50-7222ddcc7d80",
+        "elapsed": 0,
         "runningSince": null
     },
     {
-        "title": "Start a project",
-        "project": "React JS",
-        "id": "78811f2e-acd2-498b-b755-790dd89999af",
-        "elapsed": 11888,
+        "title": "Timer",
+        "project": "Project",
+        "id": "7631dbee-2bad-49c4-a857-9d73a62a1707",
+        "elapsed": 0,
         "runningSince": null
     }
 ]
